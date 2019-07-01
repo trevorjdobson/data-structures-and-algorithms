@@ -1,2 +1,2 @@
 # data-structures-and-algorithms
-daily code challenge
+Daily coding challenges for data structures and algorithms.
