@@ -46,8 +46,12 @@ const divisibleByFiveTwoToThePower = (input) => {
           if(item%5===0 && Number.isInteger(item)){
               return item;
           }
+      }).map(newEl=>{
+          return Math.pow(2,newEl)
       })
   })
+  
+  return filtered;
 }
 
 /* ------------------------------------------------------------------------------------------------
