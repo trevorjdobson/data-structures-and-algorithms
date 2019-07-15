@@ -1,5 +1,6 @@
 'use strict';
 
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
 Write a function named count that, given an integer and an array of arrays, uses either filter, map, or reduce to count the amount of times the integer is present in the array of arrays.
@@ -109,7 +110,17 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  return data.filter(el=>{
+      if(el.gender === 'male' || el.gender === 'femail'){
+          return true;
+      }
+  }).reduce((acc,cur)=>{
+      if(acc.length === 0){
+          return acc + cur.name;
+      }else{
+          return acc + ' and ' + cur.name;
+      }
+  }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,11 +130,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 
 let findShortest = (data) => {
   let output = data.reduce((acc,cur)=>{
-      console.log(acc);
-    if(parseInt(cur.height)<parseInt(acc.height)){
-        return cur;
-    }
-  },data[0])
+    if(parseInt(cur.height)>parseInt(acc.height)) return acc;
+    return cur;
+  })
   return output.name;
 };
 
@@ -168,7 +177,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return only characters that are male or female', () => {
     expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
     expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
