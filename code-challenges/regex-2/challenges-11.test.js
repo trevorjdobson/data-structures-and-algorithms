@@ -29,7 +29,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  // Solution code here...
+    return /^(\w+[.]?\w+)@\w*((\.com)|(\.net)|(\.org))$/.test(email)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  return phoneNumber.match(/^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}\$/);
+    return /([(]\d{3}[)]\d{3}\s\d{4})|([(]\d{3}[)]\s\d{3}-\d{4})|(\d{3}-\d{7})|(\d{3}\s\d{7})|(^\d{3}\s\d{3}-\d{4}$)|(\d{3}-\d{3}\s\d{4})|(\d{3}-\d{3}-\d{4})|(\d{3}\s\d{3}\s\d{4}$)|(\d{6}-\d{4})|(^\d{10}$)/gmi.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 ------------------------------------------------------------------------------------------------ */
 
 const findTagNames = elements => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should match a basic email', () => {
     expect(validateEmail('joe@codefellows.com')).toBeTruthy();
   });
