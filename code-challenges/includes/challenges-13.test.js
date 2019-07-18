@@ -53,7 +53,14 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let output = '';
+  for(let i = 0;i<str.length;i++){
+    
+    if(i%2!==0){
+      output += str.charAt(i);
+    }
+  }
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,7 +70,15 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  let counter = 0;
+  arr.forEach(el=>{
+    if(el.includes(':)')){
+      counter++;
+    }
+  })
+  if(counter === arr.length){
+    return true
+  }else return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -73,7 +88,9 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(el=>{
+    return el.includes(target);
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,7 +100,15 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  let counter = 0;
+  arr.forEach(el=>{
+    if(el.includes(target)){
+      counter++;
+    }
+  })
+  if(counter === arr.length){
+    return true
+  }else return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,7 +124,11 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(el=>{
+    return el.filter(el=>{
+      return el.includes('Brook') === false;
+    })
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -182,7 +211,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should only return the odd indexed characters from the string', () => {
     expect(onlyOddChars('0123456789')).toStrictEqual('13579');
     expect(onlyOddChars('abcd')).toStrictEqual('bd');
@@ -191,7 +220,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should correctly assess whether all the strings are happy', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
@@ -201,7 +230,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should find all the strings that contain a given string', () => {
     const words = ['things', 'apple (:)', ':)banana', 'missing that thing', 'cant:)aloupe'];
 
@@ -210,7 +239,7 @@ xdescribe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should determine whether all the strings contain a given string', () => {
     const words = ['things', 'apple pie (:)', ':)banana pie', 'missing that thing', 'cant:)aloupe is tasty'];
 
@@ -220,7 +249,7 @@ xdescribe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should remove Brook from all courses', () => {
     const roster = [
       ['Michelle', 'Allie', 'Brook TESTING'],
