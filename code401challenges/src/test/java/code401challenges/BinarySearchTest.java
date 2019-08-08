@@ -18,6 +18,12 @@ public class BinarySearchTest {
 
     }
     @Test
+    public void testBinarySearch_LargeArray(){
+        int[] sortedArray = {4,8,15,16,23,42,60,65,70,75,80,85,95,100,105,110};
+        assertTrue(BinarySearch.binarySearch(sortedArray,110)==15);
+
+    }
+    @Test
     public void testBinarySearch_Last(){
         int[] sortedArray = {4,8,15,16,23,42};
         assertTrue(BinarySearch.binarySearch(sortedArray,42)==5);

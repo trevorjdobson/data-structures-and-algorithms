@@ -21,3 +21,15 @@ I first made a new array with the length being 1 more than the input array.  I t
 
 ## Solution
 ![whiteboard](arrayShift.jpg)
+
+# Reverse an Array
+Binary Search
+
+## Challenge
+Write a function that takes in a 1D array and a key that returns the index of the element that matches the key.  If the element does not exist return -1.  Do not use any built in methods.
+
+## Approach & Efficiency
+My first approach to this problem was to find the midpoint of the array. Then check if that element is bigger or smaller than the key.  Then find the midpoint of the remaining portion of the array based off of it being bigger or smaller and repeating that process until the key is found or there are no more to check.
+
+## Solution
+![whiteboard](binarySearch.jpg)
