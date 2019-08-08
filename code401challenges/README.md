@@ -10,7 +10,7 @@ I decided to use a for loop to swap the elements of the array in place.  I used 
 ## Solution
 ![whiteboard](20190806_095408.jpg)
 
-# Reverse an Array
+# Insert in Array
 Second code challenge working with arrays
 
 ## Challenge
@@ -22,9 +22,8 @@ I first made a new array with the length being 1 more than the input array.  I t
 ## Solution
 ![whiteboard](arrayShift.jpg)
 
-# Reverse an Array
-Binary Search
-
+# Binary Search
+Third Code Challenge with arrays.
 ## Challenge
 Write a function that takes in a 1D array and a key that returns the index of the element that matches the key.  If the element does not exist return -1.  Do not use any built in methods.
 
