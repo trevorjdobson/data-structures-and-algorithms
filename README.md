@@ -5,4 +5,4 @@ Daily coding challenges for data structures and algorithms.
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges)
 
 ## JS 301 Challenges
-[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/)
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code-challenges)
