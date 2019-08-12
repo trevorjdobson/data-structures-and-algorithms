@@ -1,5 +1,5 @@
 # Linked List Library
-[Link To Directory]()
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/LinkedLists)
 
 # Reverse an Array
 First code challange working with arrays.
