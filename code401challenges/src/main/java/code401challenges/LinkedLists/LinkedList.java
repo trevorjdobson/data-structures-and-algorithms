@@ -32,4 +32,44 @@ public class LinkedList <T> {
         return output;
     }
 
+    public void insertBefore(T newNodeValue, T key){
+        Node current = this.head;
+        Node newNode = new Node<>(newNodeValue,null);
+
+        while(current != null){
+            if(this.head.value.equals(key)){
+                this.insert(newNodeValue);
+                break;
+            }
+            if(current.next.value.equals(key)){
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+    public  void insertAfter(T newNodeValue, T key){
+        Node current = this.head;
+        Node newNode = new Node<>(newNodeValue,null);
+        while(current != null){
+            if(current.value.equals(key)){
+                newNode.next = current.next;
+                current.next = newNode;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+    public void append(T newNodeValue){
+        Node current = this.head;
+        Node newNode = new Node<>(newNodeValue,null);
+        while(current.next != null){
+            current = current.next;
+        }
+        current.next = newNode;
+    }
+
 }
