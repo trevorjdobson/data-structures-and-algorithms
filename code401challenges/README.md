@@ -35,3 +35,15 @@ My first approach to this problem was to find the midpoint of the array. Then ch
 
 ## Solution
 ![whiteboard](binarySearch.jpg)
+
+# Append Linked List
+Third Code Challenge with arrays.
+## Challenge
+Write three methods that will append to the end of a linked list, that will append before a given element, and one that will append after a given element.
+
+## Approach & Efficiency
+The approach is pretty typical of a linked list.  Traverse it using a while loop looking for a key and then appending it in an appropriate place.
+
+## Solution
+![whiteboard](ll-append.jpg)
+
