@@ -47,3 +47,14 @@ The approach is pretty typical of a linked list.  Traverse it using a while loop
 ## Solution
 ![whiteboard](ll-append.jpg)
 
+
+# K From End
+Fourth Code Challenge with arrays.
+## Challenge
+Write a method that returns the value of the node at K from the end of the Linked List.
+
+## Approach & Efficiency
+The approach is pretty typical of a linked list.  Traverse it using a while loop looking for a key and then appending it in an appropriate place.
+
+## Solution
+![whiteboard](kfromend.jpg)

@@ -12,3 +12,6 @@ This is a library for a Linked List.
 * insertAfter(value,key)
 * insertBefore(value,key)
 
+## Method Added For K From End
+* kFromEnd(int)
+

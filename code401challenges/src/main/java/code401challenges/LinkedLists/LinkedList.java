@@ -72,4 +72,23 @@ public class LinkedList <T> {
         current.next = newNode;
     }
 
+    public T kFromEnd(int k) throws Exception {
+        Node current = this.head;
+        int size = 0;
+        T output = null;
+        while(current != null){
+            size++;
+            current = current.next;
+        }
+        current = this.head;
+        for(int i =0;i<size-k;i++){
+            output = (T) current.value;
+            current = current.next;
+        }
+        if(output == null){
+            throw new Exception("K is out of bounds");
+        }
+        return output;
+    }
+
 }
