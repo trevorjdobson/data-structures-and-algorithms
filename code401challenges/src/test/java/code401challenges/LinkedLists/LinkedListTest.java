@@ -127,6 +127,76 @@ public class LinkedListTest {
 
         assertTrue(expected.equals(newList.toString()));
     }
+    @Test
+    public void testKFromEnd_LastItem() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+        newList.insert(2);
+        newList.insert(7);
+        newList.insert(12);
 
+        int expected = 9;
+        int actual = newList.kFromEnd(0);
+
+        assertTrue(expected == actual);
+    }
+    @Test
+    public void testKFromEnd_MiddleItem() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+        newList.insert(2);
+        newList.insert(7);
+        newList.insert(12);
+
+        int expected = 7;
+        int actual = newList.kFromEnd(2);
+
+        assertTrue(expected == actual);
+    }
+    @Test (expected = Exception.class)
+    public void testKFromEnd_KGreater() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+        newList.insert(2);
+        newList.insert(7);
+        newList.insert(12);
+
+
+        newList.kFromEnd(10);
+
+    }
+    @Test (expected = Exception.class)
+    public void testKFromEnd_KIsSameLength() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+        newList.insert(2);
+        newList.insert(7);
+        newList.insert(12);
+
+
+        newList.kFromEnd(4);
+
+    }
+    @Test (expected = Exception.class)
+    public void testKFromEnd_KIsNegative() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+        newList.insert(2);
+        newList.insert(7);
+        newList.insert(12);
+
+
+        newList.kFromEnd(-1);
+
+    }
+    @Test
+    public void testKFromEnd_KIsSizeOne() throws Exception {
+        LinkedList<Integer> newList = new LinkedList();
+        newList.insert(9);
+
+        int expected = 9;
+        int actual = newList.kFromEnd(-0);
+        assertTrue(expected == actual);
+    }
 
 }
