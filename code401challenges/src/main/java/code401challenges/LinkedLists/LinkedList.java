@@ -28,7 +28,7 @@ public class LinkedList <T> {
             current = current.next;
         }
         output = output.substring(0, output.length() - 1);
-        System.out.println(output);
+
         return output;
     }
 
@@ -89,6 +89,26 @@ public class LinkedList <T> {
             throw new Exception("K is out of bounds");
         }
         return output;
+    }
+
+    public static LinkedList mergeLinkedLists(LinkedList listOne, LinkedList listTwo){
+        LinkedList outputList = new LinkedList<>();
+        Node currentListOne = listOne.head;
+        Node currentListTwo = listTwo.head;
+
+        while((currentListOne != null) || (currentListTwo != null)){
+            if(currentListOne != null){
+                outputList.insert(currentListOne.value);
+                currentListOne = currentListOne.next;
+            }
+            if(currentListTwo != null){
+                outputList.insert(currentListTwo.value);
+                currentListTwo = currentListTwo.next;
+            }
+
+        }
+
+        return outputList;
     }
 
 }

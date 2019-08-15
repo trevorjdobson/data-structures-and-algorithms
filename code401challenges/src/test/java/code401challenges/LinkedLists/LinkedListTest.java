@@ -198,5 +198,60 @@ public class LinkedListTest {
         int actual = newList.kFromEnd(-0);
         assertTrue(expected == actual);
     }
+    @Test
+    public void testMerge_SecondLonger(){
+        LinkedList<Integer> testListOne = new LinkedList();
+        testListOne.insert(3);
+        testListOne.insert(1);
+
+        LinkedList<Integer> testListTwo = new LinkedList();
+        testListTwo.insert(6);
+        testListTwo.insert(5);
+        testListTwo.insert(4);
+        testListTwo.insert(2);
+        LinkedList test = LinkedList.mergeLinkedLists(testListOne,testListTwo);
+        String expected = "6,5,4,3,2,1";
+        assertTrue(expected.equals(test.toString()));
+    }
+    @Test
+    public void testMerge_FirstLonger(){
+        LinkedList<Integer> testListOne = new LinkedList();
+        testListOne.insert(6);
+        testListOne.insert(5);
+        testListOne.insert(3);
+        testListOne.insert(1);
+
+        LinkedList<Integer> testListTwo = new LinkedList();
+        testListTwo.insert(4);
+        testListTwo.insert(2);
+        LinkedList test = LinkedList.mergeLinkedLists(testListOne,testListTwo);
+        String expected = "6,5,4,3,2,1";
+        assertTrue(expected.equals(test.toString()));
+    }
+    @Test
+    public void testMerge_SameLength(){
+        LinkedList<Integer> testListOne = new LinkedList();
+        testListOne.insert(3);
+        testListOne.insert(1);
+
+        LinkedList<Integer> testListTwo = new LinkedList();
+        testListTwo.insert(4);
+        testListTwo.insert(2);
+        LinkedList test = LinkedList.mergeLinkedLists(testListOne,testListTwo);
+        String expected = "4,3,2,1";
+        assertTrue(expected.equals(test.toString()));
+    }
+    @Test
+    public void testMerge_OneEmpty(){
+        LinkedList<Integer> testListOne = new LinkedList();
+        testListOne.insert(3);
+        testListOne.insert(1);
+
+        LinkedList<Integer> testListTwo = new LinkedList();
+
+        LinkedList test = LinkedList.mergeLinkedLists(testListOne,testListTwo);
+        String expected = "3,1";
+        assertTrue(expected.equals(test.toString()));
+    }
 
 }

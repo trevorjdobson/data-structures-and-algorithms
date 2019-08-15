@@ -15,3 +15,6 @@ This is a library for a Linked List.
 ## Method Added For K From End
 * kFromEnd(int)
 
+## Method Added For Zipper Merge
+* mergeLinkedLists(listOne, listTwo)
+
