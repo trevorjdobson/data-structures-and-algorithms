@@ -58,3 +58,14 @@ The approach is pretty typical of a linked list.  Traverse it using a while loop
 
 ## Solution
 ![whiteboard](kfromend.jpg)
+
+# Zipper Merge
+Fifth Code Challenge with arrays.
+## Challenge
+Write a method that takes in two linked lists and returns a list that is merged together like a zipper.
+
+## Approach & Efficiency
+Create two "Currents" which reflect the current spot on each of the lists.  Traverse via a while loop as long as one of the currents still has a value.  If there is a value insert it into the new linked list.
+
+## Solution
+![whiteboard](ll-merge.jpg)
