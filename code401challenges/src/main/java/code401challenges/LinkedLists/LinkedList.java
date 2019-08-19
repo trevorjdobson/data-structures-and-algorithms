@@ -4,7 +4,7 @@ public class LinkedList <T> {
     Node<T> head = null;
 
     public void insert(T val){
-        Node newNode = new Node<>(val,this.head);
+        Node newNode = new Node<T>(val,this.head);
         head = newNode;
 
     }
