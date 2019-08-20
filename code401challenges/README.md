@@ -69,3 +69,15 @@ Create two "Currents" which reflect the current spot on each of the lists.  Trav
 
 ## Solution
 ![whiteboard](ll-merge.jpg)
+
+# Pseudo Queue
+
+## Challenge
+Write a new class called PseudoQueue.
+This class should only utlize two stacks.  Then write a push and a pop method.
+
+## Approach & Efficiency
+If adding to the queue, check to see if the dequeue stack has nodes, if it does then pop from that stack and push to the enqueue stack after it is done going through the dequeue stack, push the value to the enqueue stack. Do the opposite for the dequeue method except return the final pop off the dequeue stack.
+
+## Solution
+![whiteboard](pseudo-queue.jpg)
