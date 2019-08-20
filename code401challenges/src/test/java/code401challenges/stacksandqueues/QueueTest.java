@@ -13,7 +13,7 @@ public class QueueTest {
         newQueue.enqueue(8);
         newQueue.enqueue(7);
 
-        String expected = "Back --> 7 --> 8 --> 9 <-- Front";
+        String expected = "Front --> 9 --> 8 --> 7 <-- Back";
         assertEquals(expected,newQueue.toString());
     }
     @Test
