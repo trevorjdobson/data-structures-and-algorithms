@@ -28,4 +28,11 @@ public class Stack <T>{
         output += " --> Null";
         return output;
     }
+    public boolean isEmpty(){
+        if(this.top!=null){
+            return false;
+        }else{
+            return true;
+        }
+    }
 }
