@@ -2,6 +2,9 @@
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/LinkedLists)
 # Stacks and Queues Library
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
+# Utilities Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/utilities)
+
 # Reverse an Array
 First code challange working with arrays.
 
@@ -82,3 +85,13 @@ If adding to the queue, check to see if the dequeue stack has nodes, if it does 
 
 ## Solution
 ![whiteboard](pseudo-queue.jpg)
+
+# Animal Shelter
+
+## Challenge
+Make a class called AnimalShelter which holds dogs and cats in a queue.  Write a method to add a cat or a dog.  Write a method to dequeue a cat or a dog which returns the value or null of the argument wasn't dog or cat.
+
+## Approach & Efficiency
+Create an animal class and a dog and cat class that extends the animal class.  Animal shelter will hold a dog queue and a cat queue.  Check the type of animal given and enqueue or dequeue from the appropriate queue.
+## Solution
+![whiteboard](animalShelter.jpg)
