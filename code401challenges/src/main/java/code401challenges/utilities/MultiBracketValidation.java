@@ -12,7 +12,7 @@ public class MultiBracketValidation {
             return false;
         }
 
-        for (int i = 0; i < input.length()-1; i++){
+        for (int i = 0; i < input.length(); i++){
             char c = input.charAt(i);
             if( (c=='(') || (c=='{') || (c=='[') ){
                 stack.push(c);
