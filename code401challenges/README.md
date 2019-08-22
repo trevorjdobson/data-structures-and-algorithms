@@ -95,3 +95,12 @@ Make a class called AnimalShelter which holds dogs and cats in a queue.  Write a
 Create an animal class and a dog and cat class that extends the animal class.  Animal shelter will hold a dog queue and a cat queue.  Check the type of animal given and enqueue or dequeue from the appropriate queue.
 ## Solution
 ![whiteboard](animalShelter.jpg)
+
+# Bracket Validation
+
+## Challenge
+Make a method that takes in a string and returns true or false based on if the brackets in that string are balanced.
+## Approach & Efficiency
+Make a stack to hole opening brackets.  If current char is an opening bracket it, push it to the stack.  If current char is a closing bracket it, pop from the stack and check that against the current char.
+## Solution
+![whiteboard](multibracket.jpg)
