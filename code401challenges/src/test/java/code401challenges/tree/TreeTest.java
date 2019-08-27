@@ -29,13 +29,13 @@ public class TreeTest {
         testTree.root = new Node(8,new Node(4,new Node (2),new Node(3)),new Node(10));
 
         String expected = "[2, 4, 3, 8, 10]";
-        assertEquals(expected,testTree.inOrder().toString());
+        assertEquals(expected,testTree.inOrder(testTree.root).toString());
     }
     @Test
     public void inOrder_Empty(){
         Tree testTree = new Tree();
         String expected = null;
-        assertEquals(expected,testTree.inOrder());
+        assertEquals(expected,testTree.inOrder(testTree.root));
     }
 
     @Test
@@ -52,5 +52,14 @@ public class TreeTest {
 
         String expected = null;
         assertEquals(expected,testTree.postOrder());
+    }
+    @Test
+    public void binaryAdd(){
+        BinarySearchTree testTree = new BinarySearchTree();
+        testTree.add(5);
+        testTree.add(8);
+        testTree.add(3);
+
+        System.out.println(testTree.inOrder(testTree.root));
     }
 }
