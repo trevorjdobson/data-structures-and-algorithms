@@ -4,7 +4,8 @@
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/stacksandqueues)
 # Utilities Library
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/utilities)
-
+# Tree Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/tree)
 # Reverse an Array
 First code challange working with arrays.
 
@@ -104,3 +105,12 @@ Make a method that takes in a string and returns true or false based on if the b
 Make a stack to hole opening brackets.  If current char is an opening bracket it, push it to the stack.  If current char is a closing bracket it, pop from the stack and check that against the current char.
 ## Solution
 ![whiteboard](multibracket.jpg)
+
+# FizzBuzzTree
+
+## Challenge
+Write a method that takes in a tree and turns the node values into "Fizz", "Buzz", or "FizzBuzz" if they are divisible by 3, 5, or both.
+## Approach & Efficiency
+Traverse the tree entirely checking first %3 && %5 then else check %3, then else check %5 changing the value if necessary. 
+## Solution
+![whiteboard](fizzbuzz.jpg)

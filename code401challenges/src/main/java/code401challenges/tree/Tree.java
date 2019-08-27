@@ -9,6 +9,7 @@ public class Tree <T>{
     Node<T> root = null;
 
 
+
     public ArrayList<T> preOrder(){
         ArrayList<T> output = new ArrayList<>();
         Stack<Node> stack = new Stack<>();
@@ -28,14 +29,29 @@ public class Tree <T>{
         }
         return output;
     }
+    public ArrayList<T> preOrderAgain(Node<T> current){
 
-    public List<T> inOrder(){
+        if(current == null){
+            return new ArrayList<>();
+        }else{
+            ArrayList<T> left = preOrderAgain(current.left);
+            ArrayList<T> right = preOrderAgain(current.right);
+
+            ArrayList<T> ans = new ArrayList<>();
+            ans.add(current.value);
+            ans.addAll(left);
+            ans.addAll(right);
+            return ans;
+        }
+    }
+
+    public List<T> inOrder(Node<T> root){
         ArrayList<T> output = new ArrayList<>();
         Stack<Node> stack = new Stack<>();
-        if(this.root==null){
+        if(root==null){
             return null;
         }
-        Node current = this.root;
+        Node current = root;
         while((current != null) || (!stack.empty())){
             while(current != null){
                 stack.push(current);
@@ -47,6 +63,22 @@ public class Tree <T>{
         }
         return output;
     }
+    public ArrayList<T> inOrderAgain(Node<T> current){
+
+        if(current == null){
+            return new ArrayList<>();
+        }else{
+            ArrayList<T> left = inOrderAgain(current.left);
+            ArrayList<T> right = inOrderAgain(current.right);
+
+            ArrayList<T> ans = new ArrayList<>();
+            ans.addAll(left);
+            ans.add(current.value);
+            ans.addAll(right);
+            return ans;
+        }
+    }
+
 
     public List<T> postOrder(){
         ArrayList<T> output = new ArrayList<>();
@@ -68,6 +100,23 @@ public class Tree <T>{
         return output;
     }
 
+
+
+    public ArrayList<T> postOrderAgain(Node<T> current){
+
+        if(current == null){
+            return new ArrayList<>();
+        }else{
+            ArrayList<T> left = postOrderAgain(current.left);
+            ArrayList<T> right = postOrderAgain(current.right);
+
+            ArrayList<T> ans = new ArrayList<>();
+            ans.addAll(left);
+            ans.addAll(right);
+            ans.add(current.value);
+            return ans;
+        }
+    }
 
 
 
