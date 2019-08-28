@@ -1,8 +1,6 @@
 package code401challenges.tree;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Tree <T>{
 
@@ -115,6 +113,19 @@ public class Tree <T>{
             ans.addAll(right);
             ans.add(current.value);
             return ans;
+        }
+    }
+    public void breadthFirst(){
+        Queue<Node> queue = new LinkedList();
+        if(this.root==null){System.out.println("The Tree Is Empty, You Should Plant Something");}
+        else{
+            queue.add(this.root);
+            while(!queue.isEmpty()){
+                Node current = queue.remove();
+                System.out.println(current.value.toString());
+                if(current.left!=null){queue.add(current.left);}
+                if(current.right!=null){queue.add(current.right);}
+            }
         }
     }
 
