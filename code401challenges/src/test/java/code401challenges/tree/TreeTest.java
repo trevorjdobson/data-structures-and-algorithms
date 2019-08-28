@@ -1,10 +1,15 @@
 package code401challenges.tree;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
+
 
 public class TreeTest {
 
@@ -61,5 +66,15 @@ public class TreeTest {
         testTree.add(3);
 
         System.out.println(testTree.inOrder(testTree.root));
+    }
+
+
+    @Test
+    public void breadthFirst(){
+        Tree testTree = new Tree();
+        testTree.root = new Node(2,new Node(7,new Node (2),new Node(6,new Node(5),new Node(11))),new Node(5,null,new Node(9,new Node(4),null)));
+        testTree.breadthFirst();
+        //Should print 2,7,5,2,6,9,5,11,4
+
     }
 }

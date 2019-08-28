@@ -114,3 +114,12 @@ Write a method that takes in a tree and turns the node values into "Fizz", "Buzz
 Traverse the tree entirely checking first %3 && %5 then else check %3, then else check %5 changing the value if necessary. 
 ## Solution
 ![whiteboard](fizzbuzz.jpg)
+
+# Breadth First
+
+## Challenge
+Write a method that traverses a tree breadth first and prints out each node.
+## Approach & Efficiency
+Use a queue to hold my nodes and as long as that queue has something in it remove and print that node then add the nodes children to the queue.
+## Solution
+![whiteboard](breadth.jpg)
