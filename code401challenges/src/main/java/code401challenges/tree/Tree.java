@@ -129,6 +129,22 @@ public class Tree <T>{
         }
     }
 
+    public int findMax(){
+            int largest = (int)this.root.value;
+            Queue<Node> queue = new LinkedList();
+            queue.add(this.root);
+            while(!queue.isEmpty()){
+                Node current = queue.remove();
+                if((int)current.value>largest){
+                    largest = (int)current.value;
+                }
+                if(current.left!=null){queue.add(current.left);}
+                if(current.right!=null){queue.add(current.right);}
+
+            }
+            return largest;
+    }
+
 
 
 
