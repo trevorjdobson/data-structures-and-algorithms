@@ -123,3 +123,12 @@ Write a method that traverses a tree breadth first and prints out each node.
 Use a queue to hold my nodes and as long as that queue has something in it remove and print that node then add the nodes children to the queue.
 ## Solution
 ![whiteboard](breadth.jpg)
+
+# FindMax
+
+## Challenge
+Write a method that returns the highest value in a tree.
+## Approach & Efficiency
+Traverse it breadth first holding a value for the largest and return that value after traversing.
+## Solution
+![whiteboard](findmax.jpg)
