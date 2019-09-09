@@ -18,7 +18,7 @@ Insert sort is a sorting algorithm that sorts the array one item at a time.  It 
 
 ## Algorithm
 * Insertion Sort works by iterating over an array taking an element out of the data set and inserting it where it belongs.  It continues this process until all elements are in their correct place.  Insertion sort is typically done in place.  
-![Visual](../Insertion-sort.gif)
+![Visual](https://github.com/trevorjdobson/data-structures-and-algorithms/blob/master/code401challenges/Insertion-sort.gif)
 
 ## Readings and References
 
