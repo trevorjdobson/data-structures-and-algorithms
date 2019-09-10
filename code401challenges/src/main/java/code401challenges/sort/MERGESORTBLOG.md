@@ -1,4 +1,4 @@
-# INSERT SORT
+# MERGE SORT
 Insert sort is a sorting algorithm that sorts the array by dividing it into the smallest lists as possible then sorting and then merging.
 ## Learning Objectives
 * Undertand The Algorithm
