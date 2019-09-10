@@ -38,4 +38,20 @@ public class SortTest {
         String actual = sort.toString(arr);
         assertEquals(expected,actual);
     }
+    @Test
+    public void mergeSort() {
+        int[] arr = {5,4,9,2,10};
+        sort.mergeSort(arr,0,arr.length-1);
+        String expected = "[2,4,5,9,10]";
+        String actual = sort.toString(arr);
+        assertEquals(expected,actual);
+    }
+    @Test
+    public void mergeSortNegative() {
+        int[] arr = {5,4,-9,2};
+        sort.mergeSort(arr,0,arr.length-1);
+        String expected = "[-9,2,4,5]";
+        String actual = sort.toString(arr);
+        assertEquals(expected,actual);
+    }
 }
