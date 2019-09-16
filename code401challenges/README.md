@@ -6,6 +6,8 @@
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/utilities)
 # Tree Library
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/tree)
+# Hash Table Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/hashtable)
 # Reverse an Array
 First code challange working with arrays.
 
