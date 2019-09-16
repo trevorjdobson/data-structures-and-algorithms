@@ -134,3 +134,14 @@ Write a method that returns the highest value in a tree.
 Traverse it breadth first holding a value for the largest and return that value after traversing.
 ## Solution
 ![whiteboard](findmax.jpg)
+
+# First Repeated Word
+
+## Challenge
+Write a method that takes in a lengthy string and returns the first repeated word.
+## Approach & Efficiency
+Split the string on spaces, turn into hash table.  Use contains method to check and return.
+# Hash Table Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/hashtable)
+## Solution
+![whiteboard](find-repeat.jpg)
