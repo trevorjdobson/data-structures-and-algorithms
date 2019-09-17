@@ -145,3 +145,14 @@ Split the string on spaces, turn into hash table.  Use contains method to check 
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/hashtable)
 ## Solution
 ![whiteboard](find-repeat.jpg)
+
+# Find Common Nodes In Tree
+
+## Challenge
+Write a method that takes in two trees and returns an array of common node values.
+## Approach & Efficiency
+Traverse the first tree checking each node value agains all the other nodes in the other tree.
+# Tree Intersection Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/treeIntersection)
+## Solution
+![whiteboard](treeintersection.jpg)
