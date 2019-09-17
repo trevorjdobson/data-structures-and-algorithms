@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Tree <T>{
 
-    Node<T> root = null;
+    public Node<T> root = null;
 
 
 

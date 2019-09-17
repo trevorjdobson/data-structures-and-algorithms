@@ -46,6 +46,17 @@ public class Hashtable {
 
     public boolean contains(String key){
         int hashKey = hash(key);
-        return this.map[hashKey] == null ? false : true;
+        if(this.map[hashKey]==null){
+            return false;
+        }
+            HashNode current = this.map[hashKey];
+            while (current != null) {
+                if (current.getKey() == key) {
+                    return true;
+                } else {
+                    current = current.next;
+                }
+            }
+        return false;
     }
 }
