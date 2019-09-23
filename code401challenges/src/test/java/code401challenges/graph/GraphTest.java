@@ -54,4 +54,24 @@ public class GraphTest {
         int actual = testGraph.getNodes().size();
         assertEquals(expected,actual);
     }
+
+    @Test
+    public void breadthFirst() {
+        testGraph.addUndirectedEdge(node1,node2,5);
+        testGraph.addUndirectedEdge(node2,node3,8);
+        String expecgted = "[Vertex{value=node1}, Vertex{value=node2}, Vertex{value=node3}]";
+        String actual = testGraph.breadthFirst(node1).toString();
+        assertEquals(expecgted,actual);
+        assertTrue(testGraph.breadthFirst(node1).size()==3);
+    }
+    @Test
+    public void breadthFirst_StartingAt3() {
+        testGraph.addUndirectedEdge(node1,node2,5);
+        testGraph.addUndirectedEdge(node2,node3,8);
+        String expecgted = "[Vertex{value=node3}, Vertex{value=node2}, Vertex{value=node1}]";
+        String actual = testGraph.breadthFirst(node3).toString();
+        assertEquals(expecgted,actual);
+        assertTrue(testGraph.breadthFirst(node3).size()==3);
+    }
+
 }

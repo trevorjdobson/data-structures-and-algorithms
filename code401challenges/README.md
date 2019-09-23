@@ -158,3 +158,14 @@ Traverse the first tree checking each node value agains all the other nodes in t
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/treeIntersection)
 ## Solution
 ![whiteboard](treeintersection.jpg)
+
+# Bread First Traversal of Graph
+
+## Challenge
+Write a method that traverses a graph breadth first.
+## Approach & Efficiency
+Create a list to hold visited nodes.  Create a queue. While the queue is not empty add node to visited and then add edges to queue.
+# Tree Intersection Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/graph)
+## Solution
+![whiteboard](graph-bf.jpg)
