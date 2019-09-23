@@ -1,7 +1,7 @@
 package code401challenges.hashtable;
 
 public class Hashtable {
-    private HashNode[] map;
+    public HashNode[] map;
 
     public Hashtable(int size){
         this.map = new HashNode[size];
