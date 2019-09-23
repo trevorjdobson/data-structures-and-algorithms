@@ -16,12 +16,12 @@ public class LeftJoinTest {
 
     @Before
     public void setUp(){
-        testHashTable1 = new Hashtable(1024);
+        testHashTable1 = new Hashtable(3);
         testHashTable1.add("test","synonim");
         testHashTable1.add("yo","synonim");
         testHashTable1.add("me","synonim");
 
-        testHashTable2 = new Hashtable(1024);
+        testHashTable2 = new Hashtable(3);
         testHashTable2.add("test","this");
         testHashTable2.add("nope","this is lab 2");
         testHashTable2.add("me","this is lab 3");
