@@ -3,6 +3,8 @@ package code401challenges.graph;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 
 public class GraphTest {
@@ -72,6 +74,19 @@ public class GraphTest {
         String actual = testGraph.breadthFirst(node3).toString();
         assertEquals(expecgted,actual);
         assertTrue(testGraph.breadthFirst(node3).size()==3);
+    }
+
+    @Test
+    public void getEdge(){
+        testGraph.addDirectedEdge(node1,node2,5);
+        testGraph.addUndirectedEdge(node2,node3,8);
+        ArrayList cities = new ArrayList();
+        cities.add(node1);
+        cities.add(node2);
+        cities.add(node3);
+        System.out.println(testGraph.getEdge(cities));
+        System.out.println(testGraph.hasNeighbor(node1,node3));
+
     }
 
 }
