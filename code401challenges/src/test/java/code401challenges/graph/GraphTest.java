@@ -78,14 +78,27 @@ public class GraphTest {
 
     @Test
     public void getEdge(){
-        testGraph.addDirectedEdge(node1,node2,5);
-        testGraph.addUndirectedEdge(node2,node3,8);
+        testGraph.addDirectedEdge(node1,node2,140);
+        testGraph.addUndirectedEdge(node2,node3,190);
         ArrayList cities = new ArrayList();
         cities.add(node1);
         cities.add(node2);
         cities.add(node3);
-        System.out.println(testGraph.getEdge(cities));
-        System.out.println(testGraph.hasNeighbor(node1,node3));
+        String actual = testGraph.getEdge(cities).toString();
+        String expected = "True=330";
+        assertEquals(actual,expected);
+
+    }
+    @Test
+    public void getEdge_FalseNotConnected(){
+        testGraph.addDirectedEdge(node1,node2,140);
+        ArrayList cities = new ArrayList();
+        cities.add(node1);
+        cities.add(node2);
+        cities.add(node3);
+        String actual = testGraph.getEdge(cities).toString();
+        String expected = "False=N/A";
+        assertEquals(actual,expected);
 
     }
 
