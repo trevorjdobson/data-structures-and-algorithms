@@ -169,3 +169,13 @@ Create a list to hold visited nodes.  Create a queue. While the queue is not emp
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/graph)
 ## Solution
 ![whiteboard](graph-bf.jpg)
+
+# Get Edge (Connecting Flights)
+
+## Challenge
+Write a method that takes in a list of cities returns if true and total price of flight if they connect.
+## Approach & Efficiency
+loop through the list checking the edges for the next city in the list of cities.
+# Tree Intersection Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/graph)
+

@@ -47,6 +47,15 @@ public class Graph<T> {
     public List<Edge<T>> getNeighbors(Vertex<T> value){
         return this.adjacencyList.get(value);
     }
+    public boolean hasNeighbor(Vertex<T> value, Vertex<T> neighbor){
+        List<Edge<T>> neighbors = this.getNeighbors(value);
+        for(Edge edge : neighbors){
+            if(edge.vertex.equals(neighbor)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public List<Vertex<T>> getNodes(){
         List<Vertex<T>> allNodes = new ArrayList<Vertex<T>>();
@@ -67,6 +76,30 @@ public class Graph<T> {
 
     public int size() {
         return size;
+    }
+
+    public AbstractMap.SimpleEntry getEdge(ArrayList<Vertex<T>> cityList){
+
+        int total = 0;
+        for(int i=0;i<cityList.size()-1;i++) {
+            if (this.adjacencyList.containsKey(cityList.get(i))) {
+                if (this.hasNeighbor(cityList.get(i), cityList.get(i + 1))) {
+                    for (Edge edge : this.getNeighbors(cityList.get(i))) {
+                        if (edge.vertex.equals(cityList.get(i + 1))) {
+                            int idx = this.getNeighbors(cityList.get(i)).indexOf(edge);
+                            total += this.getNeighbors(cityList.get(i)).get(idx).weight;
+                        }
+                    }
+                } else {
+                    return new AbstractMap.SimpleEntry("False", "N/A");
+                }
+            } else {
+                return new AbstractMap.SimpleEntry("False", "N/A");
+            }
+        }
+
+
+        return new AbstractMap.SimpleEntry("True",total);
     }
 
 
