@@ -179,3 +179,12 @@ loop through the list checking the edges for the next city in the list of cities
 # Tree Intersection Library
 [Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/graph)
 
+# Depth First Graph Traversal
+
+## Challenge
+Write a method that implements depth first traversal of a graph.
+## Approach & Efficiency
+Create a hashmap for nodes that have been seen.  Have a list to hold the nodes for return.  Use a stack and while loop to traverse the graph checking if they have been seen or not.
+# Tree Intersection Library
+[Link To Directory](https://github.com/trevorjdobson/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges/graph)
+
