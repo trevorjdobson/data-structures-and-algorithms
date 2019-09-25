@@ -12,12 +12,20 @@ public class GraphTest {
     Vertex node1;
     Vertex node2;
     Vertex node3;
+    Vertex node4;
+    Vertex node5;
+    Vertex node6;
+    Vertex node7;
     @Before
     public void setUp(){
         testGraph = new Graph();
         node1 = testGraph.addNode("node1");
         node2 = testGraph.addNode("node2");
         node3 = testGraph.addNode("node3");
+        node4 = testGraph.addNode("node4");
+        node5 = testGraph.addNode("node5");
+        node6 = testGraph.addNode("node6");
+        node7 = testGraph.addNode("node7");
 
     }
 
@@ -100,6 +108,20 @@ public class GraphTest {
         String expected = "False=N/A";
         assertEquals(actual,expected);
 
+    }
+
+    @Test
+    public void depthFirst() {
+        testGraph.addDirectedEdge(node1,node2,5);
+        testGraph.addDirectedEdge(node1,node6,5);
+        testGraph.addDirectedEdge(node2,node3,5);
+        testGraph.addDirectedEdge(node3,node4,8);
+        testGraph.addDirectedEdge(node4,node5,8);
+        testGraph.addDirectedEdge(node6,node7,8);
+        String expected = "[Vertex{value=node1}, Vertex{value=node2}, Vertex{value=node6}, Vertex{value=node7}, Vertex{value=node3}, Vertex{value=node4}, Vertex{value=node5}]";
+        String actual = testGraph.depthFirstPreOrder(node1).toString();
+        assertEquals(expected,actual);
+        assertTrue(testGraph.depthFirstPreOrder(node1).size()==7);
     }
 
 }

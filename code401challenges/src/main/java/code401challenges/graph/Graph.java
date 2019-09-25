@@ -28,6 +28,24 @@ public class Graph<T> {
         return visited;
     }
 
+    public Set<Vertex> depthFirstPreOrder(Vertex root){
+        Set<Vertex> visited = new LinkedHashSet<>();
+        Stack<Vertex> stack = new Stack<>();
+        stack.add(root);
+        visited.add(root);
+        while(!stack.isEmpty()){
+            Vertex vertex = stack.pop();
+            List<Edge<T>> neighbors = this.getNeighbors(vertex);
+            for(Edge v : neighbors){
+                if(!visited.contains(v.vertex)){
+                    visited.add(v.vertex);
+                    stack.push(v.vertex);
+                }
+            }
+        }
+        return visited;
+    }
+
     public Vertex<T> addNode(T vertex){
         Vertex<T> node = new Vertex<>(vertex);
         this.adjacencyList.put(node,new ArrayList<>());
